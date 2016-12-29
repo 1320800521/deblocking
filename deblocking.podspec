@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.name         = "deblocking"
   s.version      = "1.0.0"
-  s.summary      = "一行代码搞定xib和storyboard自动布局，最简单的UIStackView自定义，支持Cell和Tableview高度自适应，Label和ScrollView内容自适应，致力于做最简单易用的AutoLayout库。"
+  s.summary      = "2 lines of code to integrate fingerprint unlock password to unlock and gestures, safe and reliable"
 
 
   s.homepage     = "https://github.com/1320800521/deblocking.git"
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/1320800521/deblocking.git", :tag => "1.0.0" }
 
-  s.source_files  = "deblocking/**/*,{h,m}"
+s.source_files  = "deblocking/*.{h,m}"
 
   s.requires_arc = true
 
