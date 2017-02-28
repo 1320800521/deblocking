@@ -161,7 +161,7 @@
     
     for (UIButton *btn in self.selectedBtnArray) {
         
-        [selectStr appendFormat:@"%ld",btn.tag];
+        [selectStr appendFormat:@"%ld",(long)btn.tag];
     }
     
     NSString *pwdStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"pwd"];

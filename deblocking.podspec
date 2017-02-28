@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-A gesture fingerprint verification and validation framework, the integration of one line of code
+A gesture fingerprint verification and validation framework, the integration of one line of code that so easy
                    DESC
   s.homepage     = "https://github.com/1320800521/deblocking"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -90,8 +90,8 @@ A gesture fingerprint verification and validation framework, the integration of 
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "deblocking/*"
-  # s.exclude_files = "Classes/Exclude"
+  s.source_files  = "deblocking/**/*"
+  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
