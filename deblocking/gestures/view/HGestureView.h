@@ -18,11 +18,11 @@
 /*
     验证成功
  */
-@property (nonatomic,assign) void (^verifyGestureSuccess)(void);
+@property (nonatomic,copy) void (^verifyGestureSuccess)(void);
 /*
     验证手势密码失败
  */
-@property (nonatomic,assign) void (^verifyGestureFaild)(void);
+@property (nonatomic,copy) void (^verifyGestureFaild)(void);
 
 /**
  <#Description#>

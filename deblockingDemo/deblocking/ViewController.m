@@ -70,28 +70,6 @@
 }
 
 - (void)verifyGesture:(UIButton *)btn{
-
-//    
-//    HGestureModel *model = [[HGestureModel alloc]init];
-//    
-//    [model setPWD:@"123654"];
-//    
-//    HGestureView *gestureView = [[HGestureView alloc]initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height) bgViewImage:@""];
-//    [self.view addSubview:gestureView];
-//    
-//    
-////    __block HGestureView *weakView = gestureView;
-//    
-//    gestureView.verifyGestureSuccess = ^{
-//        NSLog(@"验证成功");
-//    };
-//    
-//    gestureView.verifyGestureFaild = ^{
-//        NSLog(@"验证失败");
-//        
-//      
-//    };
-//
     
     GestureViewController *gestureVC = [[GestureViewController alloc]init];
     

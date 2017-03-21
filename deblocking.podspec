@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "deblocking"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "A gesture fingerprint verification and validation framework"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 A gesture fingerprint verification and validation framework, the integration of one line of code that so easy
                    DESC
   s.homepage     = "https://github.com/1320800521/deblocking"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+    #s.screenshots  = "https://github.com/1320800521/deblocking/blob/master/效果图.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
