@@ -10,6 +10,7 @@
 #import "HTouchID.h"
 #import "HGestureView.h"
 #import "HGestureModel.h"
+#import "GestureViewController.h"
 
 @interface ViewController ()
 
@@ -47,22 +48,7 @@
     [gesturesBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [gesturesBtn addTarget:self action:@selector(verifyGesture:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:gesturesBtn];
-    
-    UIButton *pinSBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    pinSBtn.frame = CGRectMake(10, 220, 100, 50);
-    [pinSBtn setTitle:@"pin密码解锁" forState:UIControlStateNormal];
-    //    touchBtn.backgroundColor = [UIColor redColor];
-    [pinSBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [pinSBtn addTarget:self action:@selector(verifypin:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:pinSBtn];
-    
-    self.alter = [UIAlertController alertControllerWithTitle:@"😄" message:@"提示" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    
-    [self.alter addAction:okAction];
+ 
 }
 
 - (void)verifyTouchid:(UIButton *)btn{
@@ -75,33 +61,43 @@
         
         NSLog(@"成功");
         
-//        [self presentViewController:self.alter animated:YES completion:^{}];
     };
     
     touchid.verifyFaild = ^(NSError *error){
         NSLog(@"error is %@",error);
-//        self.alter.message = @"验证失败";
-//        [self presentViewController:self.alter animated:YES completion:^{}];
+
     };
 }
 
 - (void)verifyGesture:(UIButton *)btn{
 
+//    
+//    HGestureModel *model = [[HGestureModel alloc]init];
+//    
+//    [model setPWD:@"123654"];
+//    
+//    HGestureView *gestureView = [[HGestureView alloc]initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height) bgViewImage:@""];
+//    [self.view addSubview:gestureView];
+//    
+//    
+////    __block HGestureView *weakView = gestureView;
+//    
+//    gestureView.verifyGestureSuccess = ^{
+//        NSLog(@"验证成功");
+//    };
+//    
+//    gestureView.verifyGestureFaild = ^{
+//        NSLog(@"验证失败");
+//        
+//      
+//    };
+//
     
-    HGestureModel *model = [[HGestureModel alloc]init];
+    GestureViewController *gestureVC = [[GestureViewController alloc]init];
     
-    [model setPWD:@"123654"];
-    
-    HGestureView *gestureView = [[HGestureView alloc]initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height) bgViewImage:@""];
-    [self.view addSubview:gestureView];
-    
-    gestureView.verifyGestureSuccess = ^{
-        NSLog(@"验证成功");
-    };
-    
-    gestureView.verifyGestureFaild = ^{
-        NSLog(@"验证失败");
-    };
+    [self presentViewController:gestureVC animated:YES completion:^{
+        
+    }];
     
 }
 

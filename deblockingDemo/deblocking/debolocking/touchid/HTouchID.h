@@ -13,15 +13,15 @@
 /*
  验证指纹，解锁成功
  */
-@property (nonatomic,assign) void(^verifysuccess)(void);
+@property (nonatomic,copy) void(^verifysuccess)(void);
 /*
     验证失败
  */
-@property (nonatomic,assign) void (^verifyFaild)(NSError *error);
+@property (nonatomic,copy) void (^verifyFaild)(NSError *error);
 /*
     设备不支持
  */
-@property (nonatomic,assign) void (^notSupport)(void);
+@property (nonatomic,copy) void (^notSupport)(void);
 
 // 初始化
 + (instancetype)initHTouchID;
