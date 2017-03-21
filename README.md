@@ -2,7 +2,9 @@
 2 lines of code to integrate fingerprint unlock password to unlock and gestures, safe and reliable
 
 
-https://github.com/1320800521/deblocking/blob/master/效果图.gif
+
+/Users/xiaozhu/Desktop/pod 开源/deblocking/效果图.gif
+
 
 // 指纹解锁 验证
 - (void)verifyTouchid:(UIButton *)btn{
