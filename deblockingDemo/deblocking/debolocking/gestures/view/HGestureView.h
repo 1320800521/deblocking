@@ -2,8 +2,8 @@
 //  HGestureView.h
 //  deblocking
 //
-//  Created by 🐷 on 16/10/27.
-//  Copyright © 2016年 🐷. All rights reserved.
+//  Created by yupeng on 16/10/27.
+//  Copyright © 2016年 yupeng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,8 +2,8 @@
 //  ViewController.m
 //  deblocking
 //
-//  Created by 🐷 on 16/10/26.
-//  Copyright © 2016年 🐷. All rights reserved.
+//  Created by yupeng on 16/10/26.
+//  Copyright © 2016年 yupeng. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -11,6 +11,7 @@
 #import "HGestureView.h"
 #import "HGestureModel.h"
 #import "GestureViewController.h"
+#import "FaceId.h"
 
 @interface ViewController ()
 
@@ -48,8 +49,17 @@
     [gesturesBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [gesturesBtn addTarget:self action:@selector(verifyGesture:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:gesturesBtn];
+    
+    UIButton *faceidBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    faceidBtn.frame = CGRectMake(10, 160, 100, 50);
+    [faceidBtn setTitle:@"面部识别" forState:UIControlStateNormal];
+    //    touchBtn.backgroundColor = [UIColor redColor];
+    [faceidBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [faceidBtn addTarget:self action:@selector(verifyFaceid) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:faceidBtn];
  
 }
+
 
 - (void)verifyTouchid:(UIButton *)btn{
     HTouchID *touchid = [HTouchID initHTouchID];
@@ -79,8 +89,21 @@
     
 }
 
+- (void)verifyFaceid {
+    
+    [FaceId authFaceIDWithTips:@"面部识别" result:^(BOOL result, LAError error, NSString *errorDes) {
+        if (result) {
+            NSLog(@"识别成功");
+        } else {
+            NSLog(@"识别失败");
+        }
+    }];
+    
+}
+
 - (void)verifypin:(UIButton *)btn{
 
+    
 }
 
 

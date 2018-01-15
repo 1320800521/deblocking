@@ -16,17 +16,17 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "deblocking"
-  s.version      = "1.1.0"
-  s.summary      = "A gesture fingerprint verification and validation framework"
+  s.version      = "1.2.0"
+  s.summary      = "A security control, support for mobile phone security protocol, can enter password, fingerprint unlocking, Face ID unlocking, etc."
 
-  # This description is used to generate tags and improve search results.
+  # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-A gesture fingerprint verification and validation framework, the integration of one line of code that so easy
-                   DESC
+A security control, support for mobile phone security protocol, can enter password, fingerprint unlocking, Face ID unlocking, etc..
+    DESC
   s.homepage     = "https://github.com/1320800521/deblocking"
     #s.screenshots  = "https://github.com/1320800521/deblocking/blob/master/效果图.gif"
 

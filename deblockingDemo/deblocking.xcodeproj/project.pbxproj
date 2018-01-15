@@ -25,6 +25,7 @@
 		8B9064381DC0B951002479D9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B9064121DC0A1FA002479D9 /* Info.plist */; };
 		8B90643D1DC0BD43002479D9 /* HTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B90643C1DC0BD43002479D9 /* HTouchID.m */; };
 		8B9064421DC0BDF5002479D9 /* HGestureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9064411DC0BDF5002479D9 /* HGestureModel.m */; };
+		8BA292B2200772EB00FA7F1D /* FaceId.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA292B1200772EB00FA7F1D /* FaceId.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		8B90643C1DC0BD43002479D9 /* HTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTouchID.m; sourceTree = "<group>"; };
 		8B9064401DC0BDF5002479D9 /* HGestureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGestureModel.h; sourceTree = "<group>"; };
 		8B9064411DC0BDF5002479D9 /* HGestureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGestureModel.m; sourceTree = "<group>"; };
+		8BA292B0200772EB00FA7F1D /* FaceId.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceId.h; sourceTree = "<group>"; };
+		8BA292B1200772EB00FA7F1D /* FaceId.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceId.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,7 @@
 		8B9064341DC0A402002479D9 /* debolocking */ = {
 			isa = PBXGroup;
 			children = (
+				8BA292AF200772D500FA7F1D /* faceid */,
 				8B2A2E101DC2F2A600F49214 /* image */,
 				8B9064391DC0BD43002479D9 /* gestures */,
 				8B90643A1DC0BD43002479D9 /* touchid */,
@@ -222,6 +226,15 @@
 				8B0EFD251DC1D9660074C5EC /* HGestureView.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		8BA292AF200772D500FA7F1D /* faceid */ = {
+			isa = PBXGroup;
+			children = (
+				8BA292B0200772EB00FA7F1D /* FaceId.h */,
+				8BA292B1200772EB00FA7F1D /* FaceId.m */,
+			);
+			path = faceid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +304,8 @@
 				TargetAttributes = {
 					8B9063FD1DC0A1F9002479D9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 75ZMZJPBEJ;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = KJ53E7U6X7;
+						ProvisioningStyle = Automatic;
 					};
 					8B9064161DC0A1FA002479D9 = {
 						CreatedOnToolsVersion = 8.0;
@@ -371,6 +384,7 @@
 				8B9064061DC0A1F9002479D9 /* AppDelegate.m in Sources */,
 				8B9064031DC0A1F9002479D9 /* main.m in Sources */,
 				8B9064421DC0BDF5002479D9 /* HGestureModel.m in Sources */,
+				8BA292B2200772EB00FA7F1D /* FaceId.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,14 +533,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 75ZMZJPBEJ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJ53E7U6X7;
 				INFOPLIST_FILE = deblocking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rongyiju.udisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "15e267e3-39ab-4dde-abb7-8bcce12ff5e4";
-				PROVISIONING_PROFILE_SPECIFIER = "dev-udisk";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -534,15 +550,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 75ZMZJPBEJ;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KJ53E7U6X7;
 				INFOPLIST_FILE = deblocking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rongyiju.udisk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "60389ce6-6ce7-4cb4-b602-254c7d6788d1";
-				PROVISIONING_PROFILE_SPECIFIER = "adhoc-udisk";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
